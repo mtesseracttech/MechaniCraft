@@ -8,16 +8,13 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.mtesseract.mechanicraft.Proxy.CommonProxy;
+import net.mtesseract.mechanicraft.Reference.Reference;
 
-@Mod(modid = "mechanicraft", name = "MechaniCraft", version = "1.0")
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION)
 public class MechaniCraft
 {
-    public static final String MOD_NAME = "MechaniCraft";
-    public static final String MOD_ID = "mechanicraft";
-    public static final String MOD_VERSION = "1.0";
-
     @Instance
-    public static final MechaniCraft instance = new MechaniCraft();
+    public static MechaniCraft instance = new MechaniCraft();
 
     @SidedProxy(clientSide="net.mtesseract.mechanicraft.Proxy.ClientProxy", serverSide="net.mtesseract.mechanicraft.Proxy.ServerProxy")
     public static CommonProxy proxy;
